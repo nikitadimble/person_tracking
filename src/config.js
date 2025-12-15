@@ -1,5 +1,3 @@
-module.exports = {
-  api: {
-    API_URL: "https://api-node.themesbrand.website",
-  }
+export const api = {
+  API_URL: "https://api-node.themesbrand.website",
 };

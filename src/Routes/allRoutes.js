@@ -261,6 +261,7 @@ import PageBlogOverview from "../pages/Pages/Blogs/Overview";
 import SlopeCharts from "../pages/Charts/ApexCharts/SlopeCharts";
 import DashboardBlog from "../pages/DashboardBlog";
 import SheduleReport from "../pages/Forms/BasicElements/Shedule_report";
+import Tracking_add_designation from "../pages/Forms/BasicElements/tracking_add_designation";
 
 const authProtectedRoutes = [
    { path: "/add_police", component: <AddPolice /> },
@@ -278,6 +279,7 @@ const authProtectedRoutes = [
   { path: "/ShiftView", component: <ShiftView/>},
   { path: "/shift_update", component: <Shift_update/>},
   { path: "/master_search", component: <Master_search/>},
+  { path: "/tracking_add_designation", component: <Tracking_add_designation/>},
 
 
 

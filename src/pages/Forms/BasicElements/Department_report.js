@@ -15,7 +15,7 @@ import DataTable from "react-data-table-component";
 import { CSVLink } from "react-csv";
 
 const DepartmentReport = () => {
- const [filterText, setFilterText] = useState("");
+  const [filterText, setFilterText] = useState("");
   document.title = "Police Duty Management | Department Report";
 
   // ============================================================
@@ -36,36 +36,36 @@ const DepartmentReport = () => {
 
   // Columns
   const columns = [
-    { name: "Sr. No.", selector: row => row.srno, sortable: true,  width: "150px" },
-     {
-    name: "Actions",
-    cell: (row) => (
-      <div>
-         <button
-          className="btn btn-primary btn-sm me-2"
-          onClick={() => alert("Delete clicked for " + row.user_name)}
-        >
-          View
-        </button>
-        <button
-          className="btn btn-warning btn-sm me-2"
-          onClick={() => alert("Edit clicked for " + row.user_name)}
-        >
-          Edit
-        </button>
+    { name: "Sr. No.", selector: row => row.srno, sortable: true, width: "150px" },
+    {
+      name: "Actions",
+      cell: (row) => (
+        <div>
+          <button
+            className="btn btn-primary btn-sm me-2"
+            onClick={() => alert("Delete clicked for " + row.user_name)}
+          >
+            View
+          </button>
+          <button
+            className="btn btn-warning btn-sm me-2"
+            onClick={() => alert("Edit clicked for " + row.user_name)}
+          >
+            Edit
+          </button>
 
-        <button
-          className="btn btn-danger btn-sm"
-          onClick={() => alert("Delete clicked for " + row.user_name)}
-        >
-          Delete
-        </button>
-      </div>
-    )
-  },
-    { name: "Department Name", selector: row => row.dept_name, sortable: true},
- 
-];
+          <button
+            className="btn btn-danger btn-sm"
+            onClick={() => alert("Delete clicked for " + row.user_name)}
+          >
+            Delete
+          </button>
+        </div>
+      )
+    },
+    { name: "Department Name", selector: row => row.dept_name, sortable: true },
+
+  ];
 
   // Styles
   const customStyles = {
@@ -84,19 +84,19 @@ const DepartmentReport = () => {
       }
     }
   };
-    const buttonStyle = {
-        background: "#6c757d",
-        color: "white",
-        padding: "8px 16px",
-        border: "none",
-        borderRadius: "5px",
-        cursor: "pointer"
-    };
-       const filteredData = data.filter(item =>
-        Object.values(item).some(val =>
-            val.toString().toLowerCase().includes(filterText.toLowerCase())
-        )
-    );
+  const buttonStyle = {
+    background: "#6c757d",
+    color: "white",
+    padding: "8px 16px",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer"
+  };
+  const filteredData = data.filter(item =>
+    Object.values(item).some(val =>
+      val.toString().toLowerCase().includes(filterText.toLowerCase())
+    )
+  );
   return (
     <React.Fragment>
       <UiContent />
@@ -118,43 +118,43 @@ const DepartmentReport = () => {
 
                 <CardBody>
 
-                        {/* EXPORT BUTTONS */}
-                              <div className="d-flex gap-3 mb-3 flex-wrap align-items-center justify-content-between">
-                                                       <div className="d-flex gap-3 flex-wrap">
-                                                           <button
-                                                               style={buttonStyle}
-                                                               onClick={() =>
-                                                                   navigator.clipboard.writeText(JSON.stringify(data, null, 2))
-                                                               }
-                                                           >
-                                                               Copy
-                                                           </button>
-               
-                                                           <CSVLink data={data} filename="department_report.csv">
-                                                               <button style={buttonStyle}>CSV</button>
-                                                           </CSVLink>
-               
-                                                           <button style={buttonStyle} onClick={() => window.print()}>PDF</button>
-               
-                                                           <CSVLink data={data} filename="department_report.xlsx">
-                                                               <button style={buttonStyle}>Excel</button>
-                                                           </CSVLink>
-                                                       </div>
-               
-                                                       {/* SEARCH BOX */}
-                                                       <input
-                                                           type="text"
-                                                           placeholder="Search..."
-                                                           value={filterText}
-                                                           onChange={e => setFilterText(e.target.value)}
-                                                           style={{
-                                                               padding: "8px 12px",
-                                                               borderRadius: "5px",
-                                                               border: "1px solid #ccc",
-                                                               width: "200px"
-                                                           }}
-                                                       />
-                                                   </div>
+                  {/* EXPORT BUTTONS */}
+                  <div className="d-flex gap-3 mb-3 flex-wrap align-items-center justify-content-between">
+                    <div className="d-flex gap-3 flex-wrap">
+                      <button
+                        style={buttonStyle}
+                        onClick={() =>
+                          navigator.clipboard.writeText(JSON.stringify(data, null, 2))
+                        }
+                      >
+                        Copy
+                      </button>
+
+                      <CSVLink data={data} filename="department_report.csv">
+                        <button style={buttonStyle}>CSV</button>
+                      </CSVLink>
+
+                      <button style={buttonStyle} onClick={() => window.print()}>PDF</button>
+
+                      <CSVLink data={data} filename="department_report.xlsx">
+                        <button style={buttonStyle}>Excel</button>
+                      </CSVLink>
+                    </div>
+
+                    {/* SEARCH BOX */}
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      value={filterText}
+                      onChange={e => setFilterText(e.target.value)}
+                      style={{
+                        padding: "8px 12px",
+                        borderRadius: "5px",
+                        border: "1px solid #ccc",
+                        width: "200px"
+                      }}
+                    />
+                  </div>
 
                   {/* DATA TABLE */}
                   <div className="table-responsive">

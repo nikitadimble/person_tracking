@@ -11,7 +11,7 @@ import DashboardProject from "../pages/DashboardProject";
 import DashboardNFT from "../pages/DashboardNFT";
 import DashboardJob from "../pages/DashboardJob/";
 import Location from "../pages/Forms/BasicElements/Location";
-import ReportPage from "../pages/Forms/BasicElements/Location_report"; 
+import ReportPage from "../pages/Forms/BasicElements/Location_report";
 //Calendar
 import MonthGrid from "../pages/Calendar/MonthGrid";
 import Calendar from "../pages/Calendar/Maincalender";
@@ -262,24 +262,30 @@ import SlopeCharts from "../pages/Charts/ApexCharts/SlopeCharts";
 import DashboardBlog from "../pages/DashboardBlog";
 import SheduleReport from "../pages/Forms/BasicElements/Shedule_report";
 import Tracking_add_designation from "../pages/Forms/BasicElements/tracking_add_designation";
+import AddCriminal from "../pages/Forms/BasicElements/addCriminal";
+import AddJail from "../pages/Forms/BasicElements/addJail";
+import AddDevice from "../pages/Forms/BasicElements/addDevice";
 
 const authProtectedRoutes = [
-   { path: "/add_police", component: <AddPolice /> },
-   { path: "/add-employee", component: <BasicElements /> },
-   { path: "/add-shedule", component: <Shedule /> },
-   { path: "/add-department", component: <Department /> },
-   { path: "/add-location", component: <Location /> },
-   { path: "/addDuty", component: <AddDuty/>},
-   { path: "/addLeave", components: <AddLeave/>},
-  { path: "/addUser", component: <AddUser/>},
-  { path: "/Location_report", component: <ReportPage/>},
-  { path: "/Department_report", component: <DepartmentReport/>},
-  { path: "/Shedule_report", component: <SheduleReport/>},
-  { path: "/Employee_report", component: <EmployeeReport/>},
-  { path: "/ShiftView", component: <ShiftView/>},
-  { path: "/shift_update", component: <Shift_update/>},
-  { path: "/master_search", component: <Master_search/>},
-  { path: "/tracking_add_designation", component: <Tracking_add_designation/>},
+  { path: "/add_police", component: <AddPolice /> },
+  { path: "/add-employee", component: <BasicElements /> },
+  { path: "/add-shedule", component: <Shedule /> },
+  { path: "/add-department", component: <Department /> },
+  { path: "/add-location", component: <Location /> },
+  { path: "/addDuty", component: <AddDuty /> },
+  { path: "/addLeave", components: <AddLeave /> },
+  { path: "/addUser", component: <AddUser /> },
+  { path: "/Location_report", component: <ReportPage /> },
+  { path: "/Department_report", component: <DepartmentReport /> },
+  { path: "/Shedule_report", component: <SheduleReport /> },
+  { path: "/Employee_report", component: <EmployeeReport /> },
+  { path: "/ShiftView", component: <ShiftView /> },
+  { path: "/shift_update", component: <Shift_update /> },
+  { path: "/master_search", component: <Master_search /> },
+  { path: "/tracking_add_designation", component: <Tracking_add_designation /> },
+  { path: "/addCriminal", component: <AddCriminal /> },
+  { path: "/addJail", component: <AddJail /> },
+  { path: "/addDevice", component: <AddDevice /> },
 
 
 
@@ -289,7 +295,7 @@ const authProtectedRoutes = [
 
   //Chat
   { path: "/apps-chat", component: <Chat /> },
- 
+
 
   { path: "/dashboard-analytics", component: <DashboardAnalytics /> },
   { path: "/dashboard-crm", component: <DashboardCrm /> },

@@ -17,7 +17,6 @@ const AddCriminal = () => {
         crime_type : ''
     })
 
-  
 
     return (
         <React.Fragment>
@@ -29,7 +28,7 @@ const AddCriminal = () => {
                     <Row>
                         <Col lg={12}>
                             <Card>
-                                <PreviewCardHeader title="Criminal Form" reportName="Criminal Report" />
+                                <PreviewCardHeader title="Criminal Form" reportName="Criminal Report"  url="/criminalReport" />
 
                                 <CardBody className='card-body'>
                                     <div className='live-preview'>

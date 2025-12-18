@@ -265,6 +265,26 @@ import Tracking_add_designation from "../pages/Forms/BasicElements/tracking_add_
 import AddCriminal from "../pages/Forms/BasicElements/addCriminal";
 import AddJail from "../pages/Forms/BasicElements/addJail";
 import AddDevice from "../pages/Forms/BasicElements/addDevice";
+import DeviceReport from "../pages/Forms/BasicElements/deviceReport";
+import JailReport from "../pages/Forms/BasicElements/jailReport";
+import CriminalReport from "../pages/Forms/BasicElements/criminalReport";
+import AddDesignation from "../pages/Forms/BasicElements/addDesignation";
+import DesignationReport from "../pages/Forms/BasicElements/designationReport";
+import AddDistrict from "../pages/Forms/BasicElements/addDistrict";
+import DistrictReport from "../pages/Forms/BasicElements/districtReport";
+import AddDistrictDivision from "../pages/Forms/BasicElements/addDistrictDivision";
+import DistrictDivisionReport from "../pages/Forms/BasicElements/districtDivisionReport";
+import AddSector from "../pages/Forms/BasicElements/addSector";
+import SectorReport from "../pages/Forms/BasicElements/sectorReport";
+import AddSectorArea from "../pages/Forms/BasicElements/addSectorArea";
+import SectorAreaReport from "../pages/Forms/BasicElements/sectorAreaReport";
+import AddAreaZone from "../pages/Forms/BasicElements/addAreaZone";
+import ZoneReport from "../pages/Forms/BasicElements/zoneReport";
+import AddPoliceStation from "../pages/Forms/BasicElements/addPoliceStation";
+import PoliceStationReport from "../pages/Forms/BasicElements/policeStationReport";
+import AddUserTracking from "../pages/Forms/BasicElements/addUserTracking";
+import AssignDevice from "../pages/Forms/BasicElements/AssignDevice";
+import UserTrackingReport from "../pages/Forms/BasicElements/userTrackingReport";
 
 const authProtectedRoutes = [
   { path: "/add_police", component: <AddPolice /> },
@@ -286,10 +306,26 @@ const authProtectedRoutes = [
   { path: "/addCriminal", component: <AddCriminal /> },
   { path: "/addJail", component: <AddJail /> },
   { path: "/addDevice", component: <AddDevice /> },
-
-
-
-
+  { path: "/deviceReport", component: <DeviceReport />},
+  { path: "/criminalReport", component: <CriminalReport/>},
+  { path: "/jailReport", component: <JailReport/>},
+  { path: "/addDesignation", component: <AddDesignation/>},
+  { path: "/designationReport", component: <DesignationReport/>},
+  { path: "/addDistrict", component: <AddDistrict/>},
+  { path: "/districtReport", component: <DistrictReport/>},
+  { path: "/addDestrictDivision", component: <AddDistrictDivision/>},
+  { path: "/districtDivisionReport", component: <DistrictDivisionReport/>},
+  { path: "/addSector", component: <AddSector/>},
+  { path: "/sectorReport", component: <SectorReport/>},
+  { path: "/addSectorArea", component: <AddSectorArea/>},
+  { path: "/sectorAreaReport", component: <SectorAreaReport/>},
+  { path: "/addAreaZone", component: <AddAreaZone/>},
+  { path: "/zoneReport", component: <ZoneReport/>},
+  { path: "/addPoliceStation", component: <AddPoliceStation/>},
+  { path: "/policeStationReport", component: <PoliceStationReport/>},
+  { path: "/addUserTracking", component: <AddUserTracking/>},
+  { path: "/userTrackingReport", component: <UserTrackingReport/>},
+  { path: "/assignDevice", component: <AssignDevice/>},
 
 
 

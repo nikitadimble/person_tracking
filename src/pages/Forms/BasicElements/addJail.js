@@ -33,7 +33,7 @@ return (
                         <Row>
                             <Col lg={12}>
                                 <Card>
-                                    <PreviewCardHeader title="Jail Form" reportName="Jail Report" />
+                                    <PreviewCardHeader title="Jail Form" reportName="Jail Report" url="/jailReport" />
 
                                     <CardBody className='card-body'>
                                         <div className='live-preview'>

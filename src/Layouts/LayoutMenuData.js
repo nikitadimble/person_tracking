@@ -157,55 +157,55 @@ const Navdata = () => {
             },
         },
        
-    {
-  id: "baseUi",
-  label: "Master Data",
-  icon: "ri-database-2-line",   // <-- Updated icon
-  link: "/#",
-  click: function (e) {
-      e.preventDefault();
-      setIsBaseUi(!isBaseUi);
-      setIscurrentState('BaseUi');
-      updateIconSidebar(e);
-  },
-  stateVariables: isBaseUi,
-  subItems: [
-      { 
-          id: "addDepartment", 
-          label: "Add Department", 
-          link: "/add-department", 
-          parentId: "baseUi",
-          icon: "ri-building-2-line"
-      },
-      { 
-          id: "addLocation", 
-          label: "Add Location", 
-          link: "/add-location", 
-          parentId: "baseUi",
-          icon: "ri-map-pin-line"
-      },
-      { 
-          id: "addSchedule", 
-          label: "Add Shift", 
-          link: "/Shedule_report", 
-          parentId: "baseUi",
-          icon: "ri-time-line"
-      },
-      { 
-          id: "addEmployee", 
-          label: "Add Employee", 
-          link: "/add-employee", 
-          parentId: "baseUi",
-          icon: "ri-user-add-line"
-      }
-  ],
-},
-       
+//     {
+//   id: "baseUi",
+//   label: "Master Data",
+//   icon: "ri-database-2-line",   // <-- Updated icon
+//   link: "/#",
+//   click: function (e) {
+//       e.preventDefault();
+//       setIsBaseUi(!isBaseUi);
+//       setIscurrentState('BaseUi');
+//       updateIconSidebar(e);
+//   },
+//   stateVariables: isBaseUi,
+//   subItems: [
+//       { 
+//           id: "addDepartment", 
+//           label: "Add Department", 
+//           link: "/add-department", 
+//           parentId: "baseUi",
+//           icon: "ri-building-2-line"
+//       },
+//       { 
+//           id: "addLocation", 
+//           label: "Add Location", 
+//           link: "/add-location", 
+//           parentId: "baseUi",
+//           icon: "ri-map-pin-line"
+//       },
+//       { 
+//           id: "addSchedule", 
+//           label: "Add Shift", 
+//           link: "/Shedule_report", 
+//           parentId: "baseUi",
+//           icon: "ri-time-line"
+//       },
+//       { 
+//           id: "addEmployee", 
+//           label: "Add Employee", 
+//           link: "/add-employee", 
+//           parentId: "baseUi",
+//           icon: "ri-user-add-line"
+//       }
+//   ],
+// },
+  
 {
-    id: "Add Duty",
-    label: "Add Duty",
-    icon: "ri-task-line",   // 🔹 Updated icon for Duty
-    link: "/addDuty",
+    id: "Device",
+    label: "Add Designation",
+    icon: "ri-briefcase-line",  // 🔹 Updated icon for Leave
+    link: "/designationReport",
     stateVariables: isLanding,
     click: function (e) {
         e.preventDefault();
@@ -216,10 +216,10 @@ const Navdata = () => {
 },
 
 {
-    id: "Add Leave",
-    label: "Add Leave",
-    icon: "ri-file-list-line",  // 🔹 Updated icon for Leave
-    link: "/addLeave",
+    id: "District",
+    label: "Add District",
+    icon: "ri-map-pin-2-line",  // 🔹 Updated icon for Leave
+    link: "/districtReport",
     stateVariables: isLanding,
     click: function (e) {
         e.preventDefault();
@@ -228,11 +228,82 @@ const Navdata = () => {
         updateIconSidebar(e);
     },
 },
+
+{
+    id: "Division",
+    label: "Add Division",
+    icon: "ri-layout-grid-line",  // 🔹 Updated icon for Leave
+    link: "/districtDivisionReport",
+    stateVariables: isLanding,
+    click: function (e) {
+        e.preventDefault();
+        setIsLanding(!isLanding);
+        setIscurrentState('Landing');
+        updateIconSidebar(e);
+    },
+},
+
+{
+    id: "Sector",
+    label: "Add Sector",
+    icon: "ri-building-line",  // 🔹 Updated icon for Leave
+    link: "/sectorReport",
+    stateVariables: isLanding,
+    click: function (e) {
+        e.preventDefault();
+        setIsLanding(!isLanding);
+        setIscurrentState('Landing');
+        updateIconSidebar(e);
+    },
+},
+
+{
+    id: "Add Sector Area",
+    label: "Add Sector Area",
+    icon: "ri-map-2-line",  // 🔹 Updated icon for Leave
+    link: "/sectorAreaReport",
+    stateVariables: isLanding,
+    click: function (e) {
+        e.preventDefault();
+        setIsLanding(!isLanding);
+        setIscurrentState('Landing');
+        updateIconSidebar(e);
+    },
+},
+
+{
+    id: "Add Zone",
+    label: "Add Zone ",
+    icon: "ri-compass-3-line",  // 🔹 Updated icon for Leave
+    link: "/zoneReport",
+    stateVariables: isLanding,
+    click: function (e) {
+        e.preventDefault();
+        setIsLanding(!isLanding);
+        setIscurrentState('Landing');
+        updateIconSidebar(e);
+    },
+},
+
+{
+    id: "Police Station",
+    label: "Add Police Station",
+    icon: "ri-police-car-line",  // 🔹 Updated icon for Leave
+    link: "/policeStationReport",
+    stateVariables: isLanding,
+    click: function (e) {
+        e.preventDefault();
+        setIsLanding(!isLanding);
+        setIscurrentState('Landing');
+        updateIconSidebar(e);
+    },
+},
+
 {
     id: "Add User",
     label: "Add User",
     icon: "ri-user-add-line",  // 🔹 Updated icon for Leave
-    link: "/addUser",
+    link: "/userTrackingReport",
     stateVariables: isLanding,
     click: function (e) {
         e.preventDefault();
@@ -241,11 +312,12 @@ const Navdata = () => {
         updateIconSidebar(e);
     },
 },
+
 {
-    id: "Master Search",
-    label: "Master Search",
-    icon: "ri-user-add-line",  // 🔹 Updated icon for Leave
-    link: "/master_search",
+    id: "Device",
+    label: "Add Device",
+    icon: "ri-device-line",  // 🔹 Updated icon for Leave
+    link: "/deviceReport",
     stateVariables: isLanding,
     click: function (e) {
         e.preventDefault();
@@ -254,6 +326,89 @@ const Navdata = () => {
         updateIconSidebar(e);
     },
 },
+
+{
+    id: "Add Jail",
+    label: "Add Jail",
+    icon: "ri-store-line",   // 🔹 Updated icon for Duty
+    link: "/jailReport",
+    stateVariables: isLanding,
+    click: function (e) {
+        e.preventDefault();
+        setIsLanding(!isLanding);
+        setIscurrentState('Landing');
+        updateIconSidebar(e);
+    },
+},
+
+{
+    id: "Add Criminal",
+    label: "Add Criminal",
+    icon: "ri-user-2-line",   // 🔹 Updated icon for Duty
+    link: "/criminalReport",
+    stateVariables: isLanding,
+    click: function (e) {
+        e.preventDefault();
+        setIsLanding(!isLanding);
+        setIscurrentState('Landing');
+        updateIconSidebar(e);
+    },
+},
+
+{
+    id: "Assign device",
+    label: "Add Assign device",
+    icon: "ri-hand-coin-line",   // 🔹 Updated icon for Duty
+    link: "/assignDevice",
+    stateVariables: isLanding,
+    click: function (e) {
+        e.preventDefault();
+        setIsLanding(!isLanding);
+        setIscurrentState('Landing');
+        updateIconSidebar(e);
+    },
+}, 
+
+// {
+//     id: "Add Leave",
+//     label: "Add Leave",
+//     icon: "ri-file-list-line",  // 🔹 Updated icon for Leave
+//     link: "/addLeave",
+//     stateVariables: isLanding,
+//     click: function (e) {
+//         e.preventDefault();
+//         setIsLanding(!isLanding);
+//         setIscurrentState('Landing');
+//         updateIconSidebar(e);
+//     },
+// },
+// {
+//     id: "Add User",
+//     label: "Add User",
+//     icon: "ri-user-add-line",  // 🔹 Updated icon for Leave
+//     link: "/addUser",
+//     stateVariables: isLanding,
+//     click: function (e) {
+//         e.preventDefault();
+//         setIsLanding(!isLanding);
+//         setIscurrentState('Landing');
+//         updateIconSidebar(e);
+//     },
+// },
+// {
+//     id: "Master Search",
+//     label: "Master Search",
+//     icon: "ri-user-add-line",  // 🔹 Updated icon for Leave
+//     link: "/master_search",
+//     stateVariables: isLanding,
+//     click: function (e) {
+//         e.preventDefault();
+//         setIsLanding(!isLanding);
+//         setIscurrentState('Landing');
+//         updateIconSidebar(e);
+//     },
+// },
+
 
 ];
     return <React.Fragment>{menuItems}</React.Fragment>;

@@ -41,7 +41,7 @@ const AddDevice = () => {
                     <Row>
                         <Col lg={12}>
                             <Card>
-                                <PreviewCardHeader title="Device Form" reportName="Device Report" />
+                                <PreviewCardHeader title="Device Form" reportName="Device Report"  url="/deviceReport"/>
 
                                 <CardBody className="card-body">
                                     <div className="live-preview">

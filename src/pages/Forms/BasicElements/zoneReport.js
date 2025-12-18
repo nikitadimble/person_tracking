@@ -7,6 +7,7 @@ import { Card, CardBody, Container, Row, Col } from "reactstrap";
 import DataTable from "react-data-table-component";
 import { CSVLink } from "react-csv";
 
+
 const ZoneReport = () => {
   document.title = "Tracking | Zone Report";
 
